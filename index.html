@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset  = "UTF-8" name = "viewport" content = "width=device-width, initial-scale=1" />
+		<link rel = "stylesheet" type = "text/css"  href = "css/bootstrap.css"/>
+		<script src = "js/angular.js"></script>
+		<script src = "js/app.js"></script>
+	</head>
+	<body ng-app = "myModule">
+		<nav class = "navbar navbar-default">
+			<div class = "container-fluid">
+				<a class = "navbar-brand" href = "https://www.sourcecodester.com">Simple Program</a>
+			</div>
+		</nav>
+		<div class = "row">
+			<div class = "col-md-3"></div>
+			<div class = "col-md-6 well" ng-controller = "myController">
+				<h3 class  = "text-primary">Simple Change View Using AngularJS</h3>
+				<hr style - "border-top:1px dotted #000;"/>
+				<div class = "form-inline">
+					<label class = "text-info">Change View:</label>
+					<select class = "form-control" ng-model = "memberView">
+						<option value = "member_table.html">Table</option>
+						<option value = "member_list.html">List</option>
+					</select>
+				</div>
+				<br />
+				<div ng-include = "memberView"></div>
+			</div>
+		</div>
+	</body>
+</html>
